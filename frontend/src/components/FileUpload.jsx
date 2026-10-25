@@ -71,7 +71,12 @@ export default function FileUpload({ onUploadSuccess, loading, setLoading, error
       formData.append('password', password);
     }
 
-    const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const apiBase =
+      import.meta.env.VITE_API_URL !== undefined
+        ? import.meta.env.VITE_API_URL
+        : window.location.port === '5173'
+        ? 'http://localhost:8000'
+        : '';
 
     try {
       const response = await fetch(`${apiBase}/api/parse`, {
