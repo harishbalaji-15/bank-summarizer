@@ -1,13 +1,3 @@
----
-title: Bank Statement Summarizer
-emoji: 🏦
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-app_port: 7860
-pinned: false
----
-
 # Offline Bank Statement Summarizer
 
 A **100% offline** bank statement analyzer with a local Python FastAPI backend and a responsive React (Vite + Tailwind CSS) frontend designed for both desktop and mobile browsers.
